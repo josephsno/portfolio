@@ -34,7 +34,6 @@ jobs:
         python-version: '3.11'
     - name: Install requirements & collectstatic
       run: |
-        cd ${{ env.BASE_DIR }}
         python3 -m pip install -r requirements.txt
         python3 manage.py collectstatic --no-input
     
