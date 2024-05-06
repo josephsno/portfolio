@@ -42,10 +42,7 @@ jobs:
 
     - name: Build app using Buildpacks
       run: |
-        # Grant read permissions to the runner for the project root directory
-        chmod +r ${{ env.BASE_DIR }}
-
-        pack build ${{ env.DOCKER_HUB_REPO }}:${{ env.DOCKER_HUB_IMAGE_TAG }} \
+          pack build ${{ env.DOCKER_HUB_REPO }}:${{ env.DOCKER_HUB_IMAGE_TAG }} \
           --env "DISABLE_COLLECTSTATIC=1" \
           --builder ${{ env.BUILDPACK_BUILDER }}
 
