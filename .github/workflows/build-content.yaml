@@ -61,7 +61,7 @@ jobs:
 
     - name: Tag the container as latest as well specific version
       run: |
-        docker tag ${{ env.DOCKER_HUB_REPO }}:${{ env.DOCKER_HUB_IMAGE_TAG }} ${{ env.DOCKER_HUB_REPO }}:latest
+        docker tag ${{ env.DOCKER_HUB_USERNAME }}:${{ env.DOCKER_HUB_IMAGE_TAG }} ${{ env.DOCKER_HUB_USERNAME }}:latest
 
     - name: Push the specific version and latest tag to Docker Hub
       run: docker push ${{ env.DOCKER_HUB_REPO }} --all-tags
