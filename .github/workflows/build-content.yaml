@@ -61,7 +61,7 @@ jobs:
 
     - name: Tag the container as latest as well specific version
       run: |
-        docker tag ${{ env.DOCKER_HUB_REPO }}:${{ env.DOCKER_HUB_IMAGE_TAG }} joseph810/portfolio:latest
+        docker tag ${{ env.DOCKER_HUB_REPO }}:${{ env.DOCKER_HUB_IMAGE_TAG }} joseph801/portfolio:latest
 
     - name: Push the specific version and latest tag to Docker Hub
-      run: docker push joseph810/portfolio --all-tags
+      run: docker push joseph801/portfolio --all-tags
