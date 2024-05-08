@@ -3,12 +3,8 @@ name: Django Buildpack
 on:
   push:
     branches: [master]
-    paths:
-      - '/**'
   pull_request:
     branches: [master]
-    paths:
-      - '/**'
   workflow_dispatch:
     
 
